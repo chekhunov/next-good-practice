@@ -8,6 +8,14 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --black: #3b434e;
+  --white: white;
+  --primary: #7653fc;
+  --red: #FC8360;
+  --green: #1dc37e;
+  --green-light: #c8f8e4;
+  --gray-light: #afd7c6;
+  --font-family: 'Noto Sans KR', sans-serif;
 
   --primary-glow: conic-gradient(
     from 180deg at 50% 50%,
@@ -86,13 +94,14 @@ body {
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  color: rgb(var(--black));
   background: linear-gradient(
       to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
+      rgb(var(--white))
     )
     rgb(var(--background-start-rgb));
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
 a {
@@ -102,6 +111,6 @@ a {
 
 @media (prefers-color-scheme: dark) {
   html {
-    color-scheme: dark;
+    color-scheme: white;
   }
 }
