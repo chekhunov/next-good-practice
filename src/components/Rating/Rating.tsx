@@ -31,11 +31,11 @@ const Rating = ({
           })}
           onMouseEnter={() => changeDisplay(i + 1)}
           onMouseLeave={() => changeDisplay(rating)}
-          onClick={() => onClick(i + 1)}
+          onClick={() => handlerClick(i + 1)}
         >
           <StarIcon
             tabIndex={isEditable ? 0 : -1}
-            onClickDown={(e: KeyboardEvent<SVGAElement>) =>
+            onKeyDown={(e: KeyboardEvent<SVGAElement>) =>
               isEditable && handleSpace(i + 1, e)
             }
           />
@@ -52,7 +52,7 @@ const Rating = ({
     constructRating(i);
   };
 
-  const onClick = (i: number) => {
+  const handlerClick = (i: number) => {
     if (!isEditable || !setRating) {
       return;
     }
